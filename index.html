@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking Web Dea</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <main class="container">
+        <header class="hero">
+            <h3>Booking Futsal System</h3>
+            <p>web untuk sistem booking futsalmu</p>
+        </header>
+
+        <section class="card">
+            <div class="card-header">
+                <h4>List Data Booking</h4>
+                <div class="card-actions">
+                    <button class="btn-secondary">Refresh</button>
+                    <button class="btn-primary">+ Booking</button>
+                </div>
+            </div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Kode Lapangan</th>
+                        <th>Nama Pelanggan</th>
+                        <th>Tanggal Booking</th>
+                        <th>Jam Mulai</th>
+                        <th>Durasi</th>
+                    </tr>
+                </thead>
+                <tbody id="booking-list"></tbody>
+            </table>
+        </section>
+
+        <section class="card">
+            <div class="card-header">
+                <h4>Create Booking</h4>
+            </div>
+
+            <form id="booking-form">
+
+                <label>
+                    Pilih Lapangan
+                    <select id="lapangan" required>
+                        <option>loading list lapangan...</option>
+                    </select>
+                </label>
+
+                <label>
+                    Tanggal
+                    <input id="tanggal" type="date" required/>
+                </label>
+
+                <label>
+                    Jam
+                    <input id="jam" type="time" min="08:00" max="" required />
+                </label>
+
+                <label>
+                    Durasi
+                    <select id="durasi" required>
+                        <option value="1">1 Jam</option>
+                        <option value="2">2 Jam</option>
+                        <option value="3">3 Jam</option>
+                    </select>
+                </label>
+
+                <label>
+                    Nama
+                    <input id="nama" type="text" placeholder="Masukkan Nama Anda" required />
+                </label>
+
+                <div class="form-action">
+                    
+                <button type="submit" >Simpan</button>
+                <button type="submit" class="btn-primary">Booking Sekarang</button>
+                </div>
+
+            </form>
+        </section>
+    </main>
+</body>
+<script src="app.js"></script>
+</html>
